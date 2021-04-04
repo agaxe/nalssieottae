@@ -190,10 +190,6 @@ function checkLocation() {
 checkLocation();
 
 (() => {
-    const SITE_NAME = '날씨어때??';
-
-    document.title = SITE_NAME;
-
     const settingIcon = document.querySelector('.setting-icon');
     const settingList = document.querySelector('.setting-list-box');
 
