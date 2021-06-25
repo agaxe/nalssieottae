@@ -66,7 +66,8 @@ function checkLocation() {
 
         function weatherAPI() {
             const exclude = 'minutely,hourly,alert';
-            const url = `http://api.openweathermap.org/data/2.5/onecall?lat=${location_y}&lon=${location_x}&exclude=${exclude}&appid=${WEATHER_API_KEY}&units=metric&lang=kr`;
+            const protocol = window.location.protocol.indexOf('https') !== -1 ? 'https' : 'http';
+            const url = `${protocol}://api.openweathermap.org/data/2.5/onecall?lat=${location_y}&lon=${location_x}&exclude=${exclude}&appid=${WEATHER_API_KEY}&units=metric&lang=kr`;
 
             fetch(url)
                 .then((res) => res.json())
