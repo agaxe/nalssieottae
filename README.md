@@ -20,7 +20,7 @@
     - [OpenWeatherMap API 키](https://home.openweathermap.org/api_keys)
     - [kakao REST API 키](https://developers.kakao.com/)
     
-2. 프로젝트의 루트 경로에 config.js 파일을 생성 후 코드를 입력해주세요.
+2. config.js 에 발급받은 API 키를 추가해주세요.
 
     ```javascript
     const config = {
