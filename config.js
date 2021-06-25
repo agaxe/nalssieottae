@@ -1,4 +1,4 @@
 const config = {
-    WEATHER_API_KEY: '발급받은 OpenWeatherMap API 키',
-    KAKAO_API_KEY: '발급받은 kakao REST API 키'
+    WEATHER_API_KEY: '발급받은_OpenWeatherMap_API_키',
+    KAKAO_API_KEY: '발급받은_kakao_REST_API_키'
 };
