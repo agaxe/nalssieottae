@@ -1,154 +1,176 @@
 <!DOCTYPE html>
 <html lang="ko">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet" />
-        <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png" />
-        <link rel="manifest" href="./images/favicon/site.webmanifest" />
-        <link rel="mask-icon" href="./images/favicon/safari-pinned-tab.svg" color="#eb6e4b" />
-        <meta name="msapplication-TileColor" content="#eb6e4b" />
-        <meta name="theme-color" content="#ffffff" />
-        <link rel="stylesheet" href="./css/variable.css" />
-        <link rel="stylesheet" href="./css/reset.css" />
-        <link rel="stylesheet" href="./css/global.css" />
-        <link rel="stylesheet" href="./css/main.css" />
-        <title>날씨어때?</title>
-    </head>
-    <body>
-        <div id="wrap">
-            <div class="main-bg">
-                <div class="main-bg-blur"></div>
-                <div class="main-bg-img"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./src/images/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./src/images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./src/images/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./src/images/favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="./src/images/favicon/safari-pinned-tab.svg"
+      color="#eb6e4b"
+    />
+    <meta name="msapplication-TileColor" content="#eb6e4b" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="stylesheet" href="./src/styles/variable.css" />
+    <link rel="stylesheet" href="./src/styles/reset.css" />
+    <link rel="stylesheet" href="./src/styles/global.css" />
+    <link rel="stylesheet" href="./src/styles/main.css" />
+    <title>날씨어때?</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="main-bg">
+        <div class="main-bg-blur"></div>
+        <div class="main-bg-img"></div>
+      </div>
+      <div class="main-content">
+        <header>
+          <div id="logo">날씨어때?</div>
+          <context-span></context-span>
+          <div id="setting">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="100%"
+              height="100%"
+              fill="currentColor"
+              viewBox="0 0 16 16"
+              class="setting-icon"
+            >
+              <path
+                class="setting-icon"
+                d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z"
+              />
+              <path
+                class="setting-icon"
+                d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z"
+              />
+            </svg>
+            <div class="setting-list-box">
+              <span class="arrow-up"></span>
+              <ul class="setting-list">
+                <li>
+                  <button id="change-location-btn">현재 위치 변경하기</button>
+                </li>
+              </ul>
             </div>
-            <div class="main-content">
-                <header>
-                    <div id="logo">날씨어때?</div>
-
-                    <div id="setting">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="100%"
-                            height="100%"
-                            fill="currentColor"
-                            viewBox="0 0 16 16"
-                            class="setting-icon"
-                        >
-                            <path
-                                class="setting-icon"
-                                d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z"
-                            />
-                            <path
-                                class="setting-icon"
-                                d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z"
-                            />
-                        </svg>
-                        <div class="setting-list-box">
-                            <span class="arrow-up"></span>
-                            <ul class="setting-list">
-                                <li class="change-location" onclick="changeLocation()">현재 위치 변경하기</li>
-                            </ul>
-                        </div>
-                    </div>
-                </header>
-                <section>
-                    <div class="today-weather">
-                        <h2 class="timezone"></h2>
-                        <div class="weather-info">
-                            <div class="weather-icon"></div>
-                            <p class="temperature-box"><span class="temperature"></span>°</p>
-                        </div>
-
-                        <ul class="detail-weather-info">
-                            <li>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="currentColor" viewBox="0 0 16 16">
-                                    <path
-                                        d="M12.5 2A2.5 2.5 0 0 0 10 4.5a.5.5 0 0 1-1 0A3.5 3.5 0 1 1 12.5 8H.5a.5.5 0 0 1 0-1h12a2.5 2.5 0 0 0 0-5zm-7 1a1 1 0 0 0-1 1 .5.5 0 0 1-1 0 2 2 0 1 1 2 2h-5a.5.5 0 0 1 0-1h5a1 1 0 0 0 0-2zM0 9.5A.5.5 0 0 1 .5 9h10.042a3 3 0 1 1-3 3 .5.5 0 0 1 1 0 2 2 0 1 0 2-2H.5a.5.5 0 0 1-.5-.5z"
-                                    />
-                                </svg>
-                                <p><span class="wind-speed"></span>m/s</p>
-                            </li>
-                            <li class="low-high-tamp">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="currentColor" viewBox="0 0 16 16">
-                                    <path
-                                        d="M11.5 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L11 2.707V14.5a.5.5 0 0 0 .5.5zm-7-14a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V1.5a.5.5 0 0 1 .5-.5z"
-                                    />
-                                </svg>
-                                <p>
-                                    <span class="low-temp"></span>°
-                                    <span>~</span>
-                                    <span class="high-temp"></span>°
-                                </p>
-                            </li>
-                            <li>
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="-5 -2 24 24"
-                                    width="24"
-                                    height="24"
-                                    preserveAspectRatio="xMinYMin"
-                                    class="icon__icon"
-                                >
-                                    <path
-                                        d="M2 13a5 5 0 0 0 10 0c0-1.726-1.66-5.031-5-9.653C3.66 7.969 2 11.274 2 13zM7 0c4.667 6.09 7 10.423 7 13a7 7 0 0 1-14 0c0-2.577 2.333-6.91 7-13z"
-                                    ></path>
-                                </svg>
-                                <p><span class="humidity"></span>%</p>
-                            </li>
-                        </ul>
-                    </div>
-                    <ul class="week-weather"></ul>
-                </section>
+          </div>
+        </header>
+        <section>
+          <div class="today-weather">
+            <h2 class="timezone"></h2>
+            <div class="weather-info">
+              <div class="weather-icon"></div>
+              <p class="temperature-box"><span class="temperature"></span>°</p>
             </div>
-        </div>
-        <div class="search-location">
-            <h2>현재 위치는 어디인가요?</h2>
-            <div class="search-location-input-box cf">
-                <input type="text" class="search-location-input" spellcheck="false" />
-                <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="currentColor" viewBox="0 0 16 16" class="search-icon">
-                    <path
-                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
-                    />
+            <ul class="detail-weather-info">
+              <li>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="100%"
+                  height="100%"
+                  fill="currentColor"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M12.5 2A2.5 2.5 0 0 0 10 4.5a.5.5 0 0 1-1 0A3.5 3.5 0 1 1 12.5 8H.5a.5.5 0 0 1 0-1h12a2.5 2.5 0 0 0 0-5zm-7 1a1 1 0 0 0-1 1 .5.5 0 0 1-1 0 2 2 0 1 1 2 2h-5a.5.5 0 0 1 0-1h5a1 1 0 0 0 0-2zM0 9.5A.5.5 0 0 1 .5 9h10.042a3 3 0 1 1-3 3 .5.5 0 0 1 1 0 2 2 0 1 0 2-2H.5a.5.5 0 0 1-.5-.5z"
+                  />
                 </svg>
-            </div>
-
-            <ul class="location-list">
-                <li class="location-list-help">검색어를 입력해주세요</li>
+                <p><span class="wind-speed"></span>m/s</p>
+              </li>
+              <li class="low-high-tamp">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="100%"
+                  height="100%"
+                  fill="currentColor"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M11.5 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L11 2.707V14.5a.5.5 0 0 0 .5.5zm-7-14a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V1.5a.5.5 0 0 1 .5-.5z"
+                  />
+                </svg>
+                <p>
+                  <span class="low-temp"></span>°
+                  <span>~</span>
+                  <span class="high-temp"></span>°
+                </p>
+              </li>
+              <li>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="-5 -2 24 24"
+                  width="24"
+                  height="24"
+                  preserveAspectRatio="xMinYMin"
+                  class="icon__icon"
+                >
+                  <path
+                    d="M2 13a5 5 0 0 0 10 0c0-1.726-1.66-5.031-5-9.653C3.66 7.969 2 11.274 2 13zM7 0c4.667 6.09 7 10.423 7 13a7 7 0 0 1-14 0c0-2.577 2.333-6.91 7-13z"
+                  ></path>
+                </svg>
+                <p><span class="humidity"></span>%</p>
+              </li>
             </ul>
-        </div>
-        <div id="loading-box" class="on">
-            <div class="loading-content">
-                <ul class="loading-title-list">
-                    <li>오늘</li>
-                    <li>내일</li>
-                    <li>모레</li>
-                </ul>
-                <span>날씨어때?</span>
-            </div>
-        </div>
-        <script type="text/javascript" src="config.js"></script>
-        <script type="text/javascript" src="./js/weather-icons.js" defer></script>
-        <script type="text/javascript" src="./js/index.js" defer></script>
-
-        <script>
-            function saveLocation(name, x, y) {
-                const location = {
-                    location_name: name,
-                    location_x: x,
-                    location_y: y
-                };
-
-                localStorage.setItem('location', JSON.stringify(location));
-                checkLocation();
-            }
-            function changeLocation() {
-                localStorage.removeItem('location');
-                checkLocation();
-            }
-        </script>
-    </body>
+          </div>
+          <ul class="week-weather"></ul>
+        </section>
+      </div>
+    </div>
+    <div class="search-location">
+      <h2>현재 위치는 어디인가요?</h2>
+      <div class="search-location-input-box cf">
+        <input type="text" class="search-location-input" spellcheck="false" />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="100%"
+          height="100%"
+          fill="currentColor"
+          viewBox="0 0 16 16"
+          class="search-icon"
+        >
+          <path
+            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+          />
+        </svg>
+      </div>
+      <ul id="location-list" class="location-list">
+        <li class="location-list-help">검색어를 입력해주세요</li>
+      </ul>
+    </div>
+    <div id="loading-box" class="on">
+      <div class="loading-content">
+        <ul class="loading-title-list">
+          <li>오늘</li>
+          <li>내일</li>
+          <li>모레</li>
+        </ul>
+        <span>날씨어때?</span>
+      </div>
+    </div>
+    <!-- <script type="text/javascript" src="dev.js"></script> -->
+    <script type="module" src="./index.js" defer></script>
+  </body>
 </html>

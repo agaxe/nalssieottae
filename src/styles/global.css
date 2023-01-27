@@ -1,0 +1,58 @@
+@font-face {
+  font-family: 'NIXGONM-Vb';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/NIXGONM-Vb.woff')
+    format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  user-select: none;
+}
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.cf::after {
+  display: block;
+  clear: both;
+  content: '';
+}
+#wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/** loading-box **/
+#loading-box {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 200;
+  width: 100%;
+  height: 100%;
+  background: var(--white-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'NIXGONM-Vb', sans-serif;
+  font-size: 80px;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+#loading-box.on {
+  visibility: visible;
+  opacity: 1;
+}
+.loading-content {
+  position: relative;
+  padding-left: 160px;
+  overflow: hidden;
+}
+.loading-title-list {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+}

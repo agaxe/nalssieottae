@@ -23,3 +23,5 @@ function getWeatherIcon(code) {
 
   return iconObj[weatherCode];
 }
+
+export { getWeatherIcon };
