@@ -2,3 +2,4 @@ dev.js
 
 # etc
 .prettierignore
+.vscode
