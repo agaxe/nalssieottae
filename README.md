@@ -29,4 +29,5 @@
     };
     ```
 
-3. index.html 파일을 실행해주세요.
+3. VSCode 를 사용하는 경우 [Live Server Extenstion](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) 을 사용하거나 별도의 웹 서버를 통해 index.html 을 실행해주세요.
+
