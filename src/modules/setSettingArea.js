@@ -1,5 +1,5 @@
 import { checkLocation } from './checkLocation.js';
-import { $changeLocationBtn } from './elements.js';
+import { $changeLocationBtn } from '../utils/elements.js';
 
 function setSettingArea() {
   const settingIcon = document.querySelector('.setting-icon');

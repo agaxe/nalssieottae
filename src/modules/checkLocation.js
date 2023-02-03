@@ -1,5 +1,9 @@
 import { runIndecator } from './setLoading.js';
-import { $searchLocation, $loadingTitleList, $loadingBox } from './elements.js';
+import {
+  $searchLocation,
+  $loadingTitleList,
+  $loadingBox
+} from '../utils/elements.js';
 import { setWeather } from './setWeather.js';
 import { initWeather } from './initWeather.js';
 

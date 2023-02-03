@@ -1,4 +1,4 @@
-import { $loadingTitleList, $loadingBox } from './elements.js';
+import { $loadingTitleList, $loadingBox } from '../utils/elements.js';
 
 function runIndecator() {
   function loadingIndicator() {

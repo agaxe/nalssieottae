@@ -1,4 +1,4 @@
-import { fetcher } from './fetcher.js';
+import { fetcher } from '../utils/fetcher.js';
 import { getWeatherIcon } from './getWeatherIcon.js';
 
 function getSvgTag(children) {

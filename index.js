@@ -1,5 +1,5 @@
-import { checkLocation } from './src/utils/checkLocation.js';
-import { setSettingArea } from './src/utils/setSettingArea.js';
+import { checkLocation } from './src/modules/checkLocation.js';
+import { setSettingArea } from './src/modules/setSettingArea.js';
 
 checkLocation();
 setSettingArea();

@@ -1,6 +1,6 @@
-import { $searchLocation } from './elements.js';
 import { checkLocation } from './checkLocation.js';
-import { fetcher } from './fetcher.js';
+import { $searchLocation } from '../utils/elements.js';
+import { fetcher } from '../utils/fetcher.js';
 
 // eslint-disable-next-line no-undef
 const { KAKAO_API_KEY } = config;
