@@ -1,5 +1,6 @@
 import { checkLocation } from './checkLocation.js';
 import { $searchLocation } from '../utils/elements.js';
+import { createElement } from '../utils/createElement.js';
 import { fetcher } from '../utils/fetcher.js';
 
 // eslint-disable-next-line no-undef
@@ -17,12 +18,15 @@ function initWeather() {
   // 검색 input 영역
   $searchLocationInput.value = '';
 
-  const helpItem = document.createElement('li');
-  helpItem.classList.add('location-list-help');
-  helpItem.innerText = '검색어를 입력해주세요';
+  const $helpItem = createElement({
+    element: 'li',
+    className: 'location-list-help'
+  });
+
+  $helpItem.innerText = '검색어를 입력해주세요';
 
   $locationList.innerHTML = '';
-  $locationList.append(helpItem);
+  $locationList.append($helpItem);
 
   async function searchLocation(value) {
     try {
@@ -36,9 +40,11 @@ function initWeather() {
 
       //* 검색 결과가 없는 경우
       if (!data.documents.length) {
-        const $item = document.createElement('li');
+        const $item = createElement({
+          element: 'li',
+          className: 'location-list-help'
+        });
 
-        $item.classList.add('location-list-help');
         $item.innerText = '검색결과가 없습니다';
 
         $locationList.innerHTML = '';
@@ -50,9 +56,10 @@ function initWeather() {
       data.documents.forEach(item => {
         const { address_name, x, y } = item;
 
-        const $item = document.createElement('li');
-
-        $item.classList.add('location-ltem');
+        const $item = createElement({
+          element: 'li',
+          className: 'location-ltem'
+        });
         $item.innerText = address_name;
 
         $item.addEventListener('click', () => {
